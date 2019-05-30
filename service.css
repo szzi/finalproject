@@ -1,0 +1,13 @@
+table{
+	width: 60%;
+	margin: auto;
+	text-align: center;
+}
+
+table > tr > td > p > strong{
+	width: 50px;
+}
+.nav-link{
+	font-size:30px;
+	color: #bbb;
+}

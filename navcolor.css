@@ -1,0 +1,20 @@
+
+
+
+<!--/.Navbar danger color-->
+<nav class="navbar navbar-dark danger-color">
+  ...
+</nav>
+<!--/.Navbar danger color-->
+
+<!--/.Navbar secondary color-->
+<nav class="navbar navbar-dark secondary-color">
+  ...
+</nav>
+<!--/.Navbar secondary color-->
+
+<!--/.Navbar default color-->
+<nav class="navbar-light default-color lighten-4">
+background-color: rgba(255, 255, 255, 0.7) rgba-white-strong;
+</nav>
+<!--/.Navbar default color-->
