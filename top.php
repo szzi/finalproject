@@ -9,14 +9,11 @@ $conn = mysqli_connect(
     '111111',
     'cleaning');
 
-include ("configure.php");
-
 echo "<h1>TOP</h1>";
 $sql = "SELECT * FROM top";
 $result = mysqli_query($conn, $sql);
 
 echo <<< EOP
-<table width="60%" border=1 cellspacing=0 cellpadding=5>
 <tr>
 <td>name</td><td>price</td>
 </tr>
@@ -24,11 +21,10 @@ EOP;
 
 while($row = mysqli_fetch_array($result)) {
     echo '<tr>';
-    echo '<td>'.$row['name'].'</td>';
-    echo '<td>'.$row['price'].'원</td>';
+    echo '<td><p>'.$row['name'].'</p></td>';
+    echo '<td><p>'.$row['price'].'원</p></td>';
     echo '</tr>';
 }
-echo '</table>'
 ?>
 
 
