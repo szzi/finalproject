@@ -79,189 +79,61 @@
             <hr class="featurette-divider">
             <form action='service.cgi' method='post'>
                 <input type='hidden' name='datad' value='data'>
+                <div>
+                    <div class="submsg" style="margin-bottom:20px">세탁 혹은 수선하실 것을 골라주세요</div>
+                    <div class="main_check">
+                        <div class="sub_check">
+                            <p>TOP</p>
+                            <div class="checks">
+                                <?php include 'checktop.php'; ?>
+                            </div>
+                        </div>
+                        <div class="sub_check">
+                            <p>BOTTOM</p>
+                            <div class="checks">
+                                <?php include 'checkbottom.php'; ?>
+                            </div>
+                        </div>
+                        <div class="sub_check">
+                            <p>BED</p>
+                            <div class="checks">
+                                <?php include 'checkbed.php'; ?>
+                            </div>
+                        </div>
+                        <div class="sub_check">
+                            <p>SHOES</p>
+                            <div class="checks">
+                                <?php include 'checkshoes.php'; ?>
+                            </div>
+                        </div>
+                        <div class="sub_check">
+                            <p>BAG</p>
+                            <div class="checks">
+                                <?php include 'checkbag.php'; ?>
+                            </div>
+                        </div>
+                        <div class="sub_check">
+                            <p>ACC</p>
+                            <div class="checks">
+                                <?php include 'checkacc.php'; ?>
+                            </div>
+                        </div>
+                        <div class="sub_check">
+                            <p>ALTERNATION</p>
+                            <div class="checks">
+                                <?php include 'checkalternation.php'; ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
 
-                <table border=0 width=40% align=center cellpadding=5>
+                <table class="table table-striped table-condensed table-bordered" style="border=0; width=40%; align=center; cellpadding=5;">
+                <!-- 세탁물 선택     -->
                     <tr>
                         <td colspan=2 style="font-size:200%;font-weight:bold">세탁 혹은 수선하실 것을 골라주세요</td>
                     </tr>
-
-                    <tr>
-                        <td colspan=2>&nbsp;</td>
-                    </tr>
-
-                    <tr>
-                        <th>상의</th>
-                        <td><input type='checkbox' name='a' value='Cardigan'>가디건
-                            <input type="hidden" name="Cardigan" value="3000">
-                            <input type='checkbox' name='a' value='Mustang'>무스탕
-                            <input type="hidden" name="Mustang" value="12000">
-                            <input type='checkbox' name='a' value='blouse'>블라우스
-                            <input type="hidden" name="blouse" value="3000">
-                            <input type='checkbox' name='a' value='shirt'>셔츠
-                            <input type="hidden" name="셔츠" value="2000">
-                            <input type='checkbox' name='a' value='sweater'>스웨터
-                            <input type="hidden" name="sweater" value="3500">
-                            <input type='checkbox' name='a' value='one piece'>원피스
-                            <input type="hidden" name="one piece" value="6000">
-                            <input type='checkbox' name='a' value='jacket'>자켓
-                            <input type="hidden" name="jacket" value="6000">
-                            <input type='checkbox' name='a' value='jumper'>점퍼
-                            <input type="hidden" name="jumper" value="6000">
-                            <input type='checkbox' name='a' value='Suit top'>정장상의
-                            <input type="hidden" name="Suit top" value="5000">
-                            <input type='checkbox' name='a' value='vest'>조끼
-                            <input type="hidden" name="vest" value="3000">
-                            <input type='checkbox' name='a' value='Coat'>코트
-                            <input type="hidden" name="Coat" value="9000">
-                            <input type='checkbox' name='a' value='T-shirt'>티셔츠
-                            <input type="hidden" name="T-shirt" value="3000">
-                            <input type='checkbox' name='a' value='Hood jumper'>후드집업
-                            <input type="hidden" name="Hood jumper" value="5000">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colospan=2>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <th>하의</th>
-                        <td><input type='checkbox' name='b' value='Pants'>바지
-                            <input type="hidden" name="Pants" value="3000">
-                            <input type='checkbox' name='b' value='shorts'>반바지
-                            <input type="hidden" name="shorts" value="2500">
-                            <input type='checkbox' name='b' value='skirt'>스커트
-                            <input type="hidden" name="skirt" value="3000">
-                            <input type='checkbox' name='b' value='Ski suit'>스키복
-                            <input type="hidden" name="Ski suit" value="15000">
-                            <input type='checkbox' name='b' value='Underwear'>정장하의
-                            <input type="hidden" name="Underwear" value="3000">
-                            <input type='checkbox' name='b' value='Training suit'>트레이닝복 하의
-                            <input type="hidden" name="Training suit" value="3000">
-                            <input type='checkbox' name='b' value='skirt'>치마
-                            <input type="hidden" name="skirt" value="4000">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colospan=2>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <th>침구</th>
-                        <td><input type='checkbox' name='c' value='blanket'>담요
-                            <input type="hidden" name="blanket" value="5000">
-                            <input type='checkbox' name='c' value='rug'>러그
-                            <input type="hidden" name="rug" value="1000">
-                            <input type='checkbox' name='c' value='mat'>매트
-                            <input type="hidden" name="mat" value="10000">
-                            <input type='checkbox' name='c' value='mattress cover'>매트리스커버
-                            <input type="hidden" name="mattress cover" value="5000">
-                            <input type='checkbox' name='c' value='Pillow'>베개
-                            <input type="hidden" name="Pillow" value="5000">
-                            <input type='checkbox' name='c' value='Pillow cover'>배게커버
-                            <input type="hidden" name="Pillow cover" value="2000">
-                            <input type='checkbox' name='c' value='Yo'>요
-                            <input type="hidden" name="Yo" value="14000">
-                            <input type='checkbox' name='c' value='blanket'>이불
-                            <input type="hidden" name="blanket" value="10000">
-                            <input type='checkbox' name='c' value='blanket cover'>이불커버
-                            <input type="hidden" name="blanket cover" value="6000">
-                            <input type='checkbox' name='c' value='curtain'>커튼
-                            <input type="hidden" name="curtain" value="15000">
-                            <input type='checkbox' name='c' value='Topper'>토퍼
-                            <input type="hidden" name="Topper" value="20000">
-                            <input type='checkbox' name='c' value='pad'>패드
-                            <input type="hidden" name="pad" value="4000">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colospan=2>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <th>신발</th>
-                        <td><input type='checkbox' name='d' value='shoes'>구두
-                            <input type="hidden" name="shoes" value="10000">
-                            <input type='checkbox' name='d' value='Shoes'>단화
-                            <input type="hidden" name="Shoes" value="10000">
-                            <input type='checkbox' name='d' value='Hiking'>등산화
-                            <input type="hidden" name="Hiking" value="10000">
-                            <input type='checkbox' name='d' value='slipper'>슬리퍼
-                            <input type="hidden" name="slipper" value="10000">
-                            <input type='checkbox' name='d' value='Ugg boots'>어그부츠
-                            <input type="hidden" name="Ugg boots" value="10000">
-                            <input type='checkbox' name='d' value='sports shoes'>운동화
-                            <input type="hidden" name="sports shoes" value="10000">
-                            <input type='checkbox' name='d' value='Walker'>워커
-                            <input type="hidden" name="Walker" value="10000">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colospan=2>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <th>가방</th>
-                        <td><input type='checkbox' name='e' value='Mountain climbing'>등산
-                            <input type="hidden" name="Mountain climbing" value="8000">
-                            <input type='checkbox' name='e' value='Luxury'>명품
-                            <input type="hidden" name="Luxury" value="50000">
-                            <input type='checkbox' name='e' value='mini'>미니
-                            <input type="hidden" name="mini" value="3000">
-                            <input type='checkbox' name='e' value='backpack'>백팩
-                            <input type="hidden" name="backpack" value="20000">
-                            <input type='checkbox' name='e' value='Normal'>일반
-                            <input type="hidden" name="Normal" value="15000">
-                            <input type='checkbox' name='e' value='cloth'>천
-                            <input type="hidden" name="cloth" value="10000">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colospan=2>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <th>악세사리</th>
-                        <td><input type='checkbox' name='f' value='necktie'>넥타이
-                            <input type="hidden" name="necktie" value="1500">
-                            <input type='checkbox' name='f' value='hat'>모자
-                            <input type="hidden" name="hat" value="3000">
-                            <input type='checkbox' name='f' value='neck warmer'>목도리
-                            <input type="hidden" name="neck warmer" value="3000">
-                            <input type='checkbox' name='f' value='scarf'>스카프
-                            <input type="hidden" name="scarf" value="2000">
-                            <input type='checkbox' name='f' value='doll'>인형
-                            <input type="hidden" name="doll" value="3000">
-                            <input type='checkbox' name='f' value='Gloves'>장갑
-                            <input type="hidden" name="Gloves" value="3000">
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colospan=2>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <th>수선</th>
-                        <td><input type='checkbox' name='g' value='T-shirt'>티셔츠 기장/소매기장/품
-                            <input type="hidden" name="T-shirt" value="5000">
-                            <input type='checkbox' name='g' value='Simple repair'>간단수선
-                            <input type="hidden" name="Simple repair" value="3000">
-                            <input type='checkbox' name='g' value='Rubber band'>고무밴드 교체
-                            <input type="hidden" name="Rubber band" value="6000">
-                            <input type='checkbox' name='g' value='Metal lock'>금속잠금 교체
-                            <input type="hidden" name="Metal lock" value="3000">
-                            <input type='checkbox' name='g' value='Shirt'>남방기장/소매기장/품
-                            <input type="hidden" name="Shirt" value="6000">
-                            <input type='checkbox' name='g' value='Nu Beam'>누빔
-                            <input type="hidden" name="Nu Beam" value="3000">
-                            <input type='checkbox' name='g' value='Pants'>정장바지,청바지,면바지통/기장
-                            <input type="hidden" name="Pants" value="7000">
-                            <input type='checkbox' name='g' value='top'>상의기장/품
-                            <input type="hidden" name="top" value="15000">
-                            <input type='checkbox' name='g' value='skirt'>치마, 원피스 통/기장
-                            <input type="hidden" name="skirt" value="10000">
-                            <input type='checkbox' name='g' value='bleaching'>표백
-                            <input type="hidden" name="bleaching" value="3000">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colospan=2>&nbsp;</td>
-                    </tr>
-
+                    
                     <!--시간 선택-->
                     <tr>
                         <td colspan=2 style="font-size:200%;font-weight:bold">세탁물 수거,배송 날짜 및 시간을 입력해주세요</td>
@@ -374,7 +246,6 @@
         </div>
         <hr class="featurette-divider">
     </div>
-    <!--지역 선택하기 북구동구서구중구, 그리고 textbox만들어서 상세주소 입력받기-->
 
 
     <hr class="featurette-divider">
