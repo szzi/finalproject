@@ -76,177 +76,160 @@
         <div>
             <h2 class="featurette-heading"><b class="text-muted">서비스 이용</h2><br>
             <p class="lead">가격은 아래의 <b>가격안내</b>를 참조해 주세요</p>
-            <hr class="featurette-divider">
-            <form action='service.cgi' method='post'>
+            <hr>
+            <form action='cal.php' method='post'>
                 <input type='hidden' name='datad' value='data'>
                 <div>
                     <div class="submsg" style="margin-bottom:20px">세탁 혹은 수선하실 것을 골라주세요</div>
                     <div class="main_check">
                         <div class="sub_check">
-                            <p>TOP</p>
-                            <div class="checks">
+                            <p>상의</p>
+                            <div class="checks" id="scroll">
                                 <?php include 'checktop.php'; ?>
                             </div>
                         </div>
                         <div class="sub_check">
-                            <p>BOTTOM</p>
-                            <div class="checks">
+                            <p>하의</p>
+                            <div class="checks" id="scroll">
                                 <?php include 'checkbottom.php'; ?>
                             </div>
                         </div>
                         <div class="sub_check">
-                            <p>BED</p>
-                            <div class="checks">
+                            <p>침구</p>
+                            <div class="checks" id="scroll">
                                 <?php include 'checkbed.php'; ?>
                             </div>
                         </div>
                         <div class="sub_check">
-                            <p>SHOES</p>
-                            <div class="checks">
+                            <p>신발</p>
+                            <div class="checks" id="scroll">
                                 <?php include 'checkshoes.php'; ?>
                             </div>
                         </div>
                         <div class="sub_check">
-                            <p>BAG</p>
-                            <div class="checks">
+                            <p>가방</p>
+                            <div class="checks" id="scroll">
                                 <?php include 'checkbag.php'; ?>
                             </div>
                         </div>
                         <div class="sub_check">
-                            <p>ACC</p>
-                            <div class="checks">
+                            <p>기타</p>
+                            <div class="checks" id="scroll">
                                 <?php include 'checkacc.php'; ?>
                             </div>
                         </div>
                         <div class="sub_check">
-                            <p>ALTERNATION</p>
-                            <div class="checks">
+                            <p>수선</p>
+                            <div class="checks" id="scroll">
                                 <?php include 'checkalternation.php'; ?>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+                <button class="btn_submit" type='submit' value='제출'>제출</button>
+                <button class="btn_submit" type='reset' value='Clear'>clear</button>
+            </form>
+        </div>
+    <!-- form 끝 -->
+    <!-- 이거순 수선코드 -->
+            <!-- <td colspan=2 style="font-size:200%;font-weight:bold">세탁물 수거,배송 날짜 및 시간을 입력해주세요</td>
+        </tr>
+        <tr>
+            <td colspan=2>&nbsp;</td>
+        </tr>
 
-                <table class="table table-striped table-condensed table-bordered" style="border=0; width=40%; align=center; cellpadding=5;">
-                <!-- 세탁물 선택     -->
-                    <tr>
-                        <td colspan=2 style="font-size:200%;font-weight:bold">세탁 혹은 수선하실 것을 골라주세요</td>
-                    </tr>
-                    
-                    <!--시간 선택-->
-                    <tr>
-                        <td colspan=2 style="font-size:200%;font-weight:bold">세탁물 수거,배송 날짜 및 시간을 입력해주세요</td>
-                    </tr>
-                    <tr>
-                        <td colspan=2>&nbsp;</td>
-                    </tr>
+        <tr>
+            <th>수거 시간</th>
+            <td>
+                <input type='radio' name='before' value='11 14'>11시~14시
+                <input type='radio' name='before' value='14 17'>14시~17시
+                <input type='radio' name='before' value='17 20'>17시~20시
+                날짜 : <input type="text" name="bdate" placeholder="ex:20181212">
+            </td>
+        </tr>
 
-                    <tr>
-                        <th>수거 시간</th>
-                        <td>
-                            <input type='radio' name='before' value='11 14'>11시~14시
-                            <input type='radio' name='before' value='14 17'>14시~17시
-                            <input type='radio' name='before' value='17 20'>17시~20시
-                            날짜 : <input type="text" name="bdate" placeholder="ex:20181212">
-                        </td>
-                    </tr>
+        <tr>
+            <td colspan=2>&nbsp;</td>
+        </tr>
 
-                    <tr>
-                        <td colspan=2>&nbsp;</td>
-                    </tr>
+        <tr>
+            <th>배송 시간</th>
+            <td>
+                <input type='radio' name='after' value='11 14'>11시~14시
+                <input type='radio' name='after' value='14 17'>14시~17시
+                <input type='radio' name='after' value='17 20'>17시~20시
+                날짜 : <input type="text" name="adate" placeholder="ex:20181212"></td>
+        </tr> -->
 
-                    <tr>
-                        <th>배송 시간</th>
-                        <td>
-                            <input type='radio' name='after' value='11 14'>11시~14시
-                            <input type='radio' name='after' value='14 17'>14시~17시
-                            <input type='radio' name='after' value='17 20'>17시~20시
-                            날짜 : <input type="text" name="adate" placeholder="ex:20181212"></td>
-                    </tr>
+        <div class="container marketing">
+            <hr class="featurette-divider">
+            <div>
+                <h2 class="featurette-heading"><b class="text-muted">가격 안내</h2><br>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" onclick="show('top'); return false">상의</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="show('bottom'); return false">하의</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="show('bed'); return false">침구</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="show('shoes'); return false">신발</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="show('bag'); return false">가방</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="show('acc'); return false">기타</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="show('alternation'); return false">수선</a>
+                    </li>
+                </ul>
+                <br><br>
 
-                    <tr>
-                        <td colspan=2 style="text-indent:10px">
-                            <input type='submit' value='제출'>
-                            <input type='reset' value='Clear'>
-                        </td>
-                    </tr>
+                <div id="top" style="display:none">
+                    <table class="table table-striped table-condensed table-bordered">
+                        <?php include 'top.php'; ?>
+                    </table>
+                </div>
+                <div id="bottom" style="display:none">
+                    <table class="table table-striped table-condensed table-bordered">
+                        <?php include 'bottom.php'; ?>
+                    </table>
+                </div>
+                <div id="bed" style="display:none">
+                    <table class="table table-striped table-condensed table-bordered">
+                        <?php include 'bed.php'; ?>
+                    </table>
+                </div>
+                <div id="shoes" style="display:none">
 
-                </table>
+                    <table class="table table-striped table-condensed table-bordered">
+                        <?php include 'shoes.php'; ?>
+                    </table>
+                </div>
+                <div id="bag" style="display:none">
+                    <table class="table table-striped table-condensed table-bordered">
+                        <?php include 'bag.php'; ?>
+                    </table>
+                </div>
+                <div id="acc" style="display:none">
+                    <table class="table table-striped table-condensed table-bordered">
+                        <?php include 'acc.php'; ?>
+                    </table>
+                </div>
+                <div id="alternation" style="display:none">
+                    <table class="table table-striped table-condensed table-bordered">
+                        <?php include 'alternation.php'; ?>
+                    </table>
+                </div>
+            </div>
+            <hr class="featurette-divider">
         </div>
     </div>
-
-
-    <!--가격 table-->
-    <div class="container marketing">
-        <hr class="featurette-divider">
-        <div>
-            <h2 class="featurette-heading"><b class="text-muted">가격 안내</h2><br>
-            <ul class="nav nav-tabs">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#" onclick="show('top'); return false">상의</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="show('bottom'); return false">하의</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="show('bed'); return false">침구</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="show('shoes'); return false">신발</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="show('bag'); return false">가방</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="show('acc'); return false">기타</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="show('alternation'); return false">수선</a>
-                </li>
-            </ul>
-            <br><br>
-
-            <div id="top" style="display:none">
-                <table class="table table-striped table-condensed table-bordered">
-                    <?php include 'top.php'; ?>
-                </table>
-            </div>
-            <div id="bottom" style="display:none">
-                <table class="table table-striped table-condensed table-bordered">
-                    <?php include 'bottom.php'; ?>
-                </table>
-            </div>
-            <div id="bed" style="display:none">
-                <table class="table table-striped table-condensed table-bordered">
-                    <?php include 'bed.php'; ?>
-                </table>
-            </div>
-            <div id="shoes" style="display:none">
-
-                <table class="table table-striped table-condensed table-bordered">
-                    <?php include 'shoes.php'; ?>
-                </table>
-            </div>
-            <div id="bag" style="display:none">
-                <table class="table table-striped table-condensed table-bordered">
-                    <?php include 'bag.php'; ?>
-                </table>
-            </div>
-            <div id="acc" style="display:none">
-                <table class="table table-striped table-condensed table-bordered">
-                    <?php include 'acc.php'; ?>
-                </table>
-            </div>
-            <div id="alternation" style="display:none">
-                <table class="table table-striped table-condensed table-bordered">
-                    <?php include 'alternation.php'; ?>
-                </table>
-            </div>
-        </div>
-        <hr class="featurette-divider">
-    </div>
-
 
     <hr class="featurette-divider">
     <!-- FOOTER -->
@@ -264,15 +247,15 @@
         // }
         var before = null;
         function show(target) {
-        if(before!=null){
-            hide(before);
-        }
-        document.getElementById(target).style.display = 'block';
-        before = target;
+            if (before != null) {
+                hide(before);
+            }
+            document.getElementById(target).style.display = 'block';
+            before = target;
         }
 
         function hide(target) {
-        document.getElementById(target).style.display = 'none';
+            document.getElementById(target).style.display = 'none';
         }
     </script>
     <!-- Bootstrap core JavaScript
