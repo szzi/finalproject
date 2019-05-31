@@ -9,7 +9,7 @@ $conn = mysqli_connect(
     '111111',
     'cleaning');
 
-echo "<h1>BAG</h1>";
+// echo "<h1>BAG</h1>";
 $sql = "SELECT * FROM bag";
 $result = mysqli_query($conn, $sql);
 

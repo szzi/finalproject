@@ -8,8 +8,8 @@ $conn = mysqli_connect(
     'root',
     '111111',
     'cleaning');
-    
-echo "<h1>BOTTOM</h1>";
+
+// echo "<h1>BOTTOM</h1>";
 $sql = "SELECT * FROM bottom";
 $result = mysqli_query($conn, $sql);
 

@@ -9,7 +9,7 @@ $conn = mysqli_connect(
     '111111',
     'cleaning');
     
-echo "<h1>SHOES</h1>";
+// echo "<h1>SHOES</h1>";
 $sql = "SELECT * FROM shoes";
 $result = mysqli_query($conn, $sql);
 

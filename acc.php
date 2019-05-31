@@ -10,7 +10,7 @@ $conn = mysqli_connect(
     'cleaning');
 
 
-echo "<h1>ACC</h1>";
+// echo "<h1>ACC</h1>";
 $sql = "SELECT * FROM acc";
 $result = mysqli_query($conn, $sql);
 

@@ -9,7 +9,7 @@ $conn = mysqli_connect(
     '111111',
     'cleaning');
 
-echo "<h1>BED</h1>";
+// echo "<h1>BED</h1>";
 $sql = "SELECT * FROM bed";
 $result = mysqli_query($conn, $sql);
 

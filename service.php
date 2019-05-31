@@ -21,9 +21,9 @@
     <title>세탁 전문 서비스, Clean And White</title>
 
     <!-- Bootstrap core CSS -->
-    
+
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-    
+
 
     <!-- Custom styles for this template -->
     <link href="jumbotron.css" rel="stylesheet">
@@ -310,52 +310,67 @@
         <hr class="featurette-divider">
         <div>
             <h2 class="featurette-heading"><b class="text-muted">가격 안내</h2><br>
-                <ul class="nav nav-tabs">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="top.php" onclick="window.open(this.href, '', ''); return false;">top</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="bottom.php">bottom</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="bed.php">bed</a>
-                    </li>
-                    <li class="nav-item">
-                            <a class="nav-link" href="shoes.php">shoes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="bag.php">bag</a>
-                    </li>
-                    <li class="nav-item">
-                            <a class="nav-link" href="acc.php">acc</a>
-                    </li>
-                    <li class="nav-item">
-                            <a class="nav-link" href="alternation.php">reform</a>
-                    </li>
-                </ul>
-    <br><br>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" onclick="show('top'); return false">상의</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="show('bottom'); return false">하의</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="show('bed'); return false">침구</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="show('shoes'); return false">신발</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="show('bag'); return false">가방</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="show('acc'); return false">기타</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="show('alternation'); return false">수선</a>
+                </li>
+            </ul>
+            <br><br>
 
-            <table id="top" class="table table-striped table-condensed table-bordered">
-                <?php include 'top.php'; ?>
-            </table>
-            <table id="bottom" class="table table-striped table-condensed table-bordered">
-                <?php include 'bottom.php'; ?>
-            </table>
-            <table id="bed" class="table table-striped table-condensed table-bordered">
-                <?php include 'bed.php'; ?>
-            </table>
-            <table id="shoes" class="table table-striped table-condensed table-bordered">
-                <?php include 'shoes.php'; ?>
-            </table>
-            <table id="bag" class="table table-striped table-condensed table-bordered">
-                <?php include 'bag.php'; ?>
-            </table>
-            <table id="acc" class="table table-striped table-condensed table-bordered">
-                <?php include 'acc.php'; ?>
-            </table>
-            <table id="alternation" class="table table-striped table-condensed table-bordered">
-            <?php include 'alternation.php'; ?>
-            </table>
+            <div id="top" style="display:none">
+                <table class="table table-striped table-condensed table-bordered">
+                    <?php include 'top.php'; ?>
+                </table>
+            </div>
+            <div id="bottom" style="display:none">
+                <table class="table table-striped table-condensed table-bordered">
+                    <?php include 'bottom.php'; ?>
+                </table>
+            </div>
+            <div id="bed" style="display:none">
+                <table class="table table-striped table-condensed table-bordered">
+                    <?php include 'bed.php'; ?>
+                </table>
+            </div>
+            <div id="shoes" style="display:none">
+
+                <table class="table table-striped table-condensed table-bordered">
+                    <?php include 'shoes.php'; ?>
+                </table>
+            </div>
+            <div id="bag" style="display:none">
+                <table class="table table-striped table-condensed table-bordered">
+                    <?php include 'bag.php'; ?>
+                </table>
+            </div>
+            <div id="acc" style="display:none">
+                <table class="table table-striped table-condensed table-bordered">
+                    <?php include 'acc.php'; ?>
+                </table>
+            </div>
+            <div id="alternation" style="display:none">
+                <table class="table table-striped table-condensed table-bordered">
+                    <?php include 'alternation.php'; ?>
+                </table>
+            </div>
         </div>
         <hr class="featurette-divider">
     </div>
@@ -370,7 +385,25 @@
 
     </div><!-- /.container -->
 
+    <script type="text/javascript">
 
+        // var top = document.getElementById("top");
+        // function visible() {
+        //     top.style.display = "block";
+        // }
+        var before = null;
+        function show(target) {
+        if(before!=null){
+            hide(before);
+        }
+        document.getElementById(target).style.display = 'block';
+        before = target;
+        }
+
+        function hide(target) {
+        document.getElementById(target).style.display = 'none';
+        }
+    </script>
     <!-- Bootstrap core JavaScript
         ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
