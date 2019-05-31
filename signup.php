@@ -8,15 +8,20 @@ include ("connect.php");
 $connect=connect_db($host, $dbid, $dbpw, $dbname);
 $userid = $_POST['user_id'];
 $data_stream = "'".$_POST['user_id']."',password('".$_POST['user_pw']."'),'".$_POST['email']."'";
-$sql = "SELECT user_id FROM user WHERE user_id = {$userid}";
-$res = mysqli_query($sql);
-$exist = mysqli_num_rows($res);
 
-if($exist>0){
+$sql = "SELECT user_id FROM user WHERE user_id = {$userid}";
+$query = "insert into user(user_id,user_pw,email) values (".$data_stream.")";
+
+$res = mysqli_query($connect,$sql);
+echo $sql;
+$exist = mysqli_num_rows($res);
+echo '줄2';
+echo $exist;
+
+if($exist > 0){
         echo '이미 존재하는 아이디가 있습니다.';
         exit;
 }else{
-        $query = "insert into user(user_id,user_pw,email) values (".$data_stream.")";
         $result = mysqli_query($connect, $query);
         
         mysqli_close($connect);
